@@ -1,0 +1,5 @@
+west:
+  command: C:\Users\fahru\AppData\Local\Programs\Python\Python312\Scripts\west build
+    -b stm32f4_disco --pristine
+  topdir: C:\zephyrproject
+  version: 1.2.0

@@ -1,5 +1,6 @@
-# Copyright (c) 2021 Nordic Semiconductor ASA
-# SPDX-License-Identifier: Apache-2.0
-
 config BOARD_CUSTOM_PLANK
-	select SOC_NRF52840_QIAA
+    bool "Custom STM32F4 Discovery Board"
+    select SOC_STM32F407XX
+    select BOARD_HAS_NRF5_BOOTLOADER if FLASH_LOAD_OFFSET
+    help
+      Enable support for the Custom STM32F4 Discovery Board.

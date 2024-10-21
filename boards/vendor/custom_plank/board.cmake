@@ -1,12 +1,7 @@
-# Copyright (c) 2021 Nordic Semiconductor ASA
-# SPDX-License-Identifier: Apache-2.0
+# Custom board CMake configuration for STM32F407
 
-board_runner_args(jlink "--device=nrf52" "--speed=4000")
-board_runner_args(pyocd "--target=nrf52840" "--frequency=4000000")
+# Setting up OpenOCD for STM32F4
+board_runner_args(openocd "--file" "board/stm32f4discovery.cfg")
 
-set(OPENOCD_NRF5_SUBFAMILY "nrf52")
-
-include(${ZEPHYR_BASE}/boards/common/nrfjprog.board.cmake)
-include(${ZEPHYR_BASE}/boards/common/jlink.board.cmake)
-include(${ZEPHYR_BASE}/boards/common/pyocd.board.cmake)
-include(${ZEPHYR_BASE}/boards/common/openocd-nrf5.board.cmake)
+# Include the Zephyr STM32 common CMake configurations
+include(${ZEPHYR_BASE}/boards/common/openocd.board.cmake)

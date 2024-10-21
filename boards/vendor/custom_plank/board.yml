@@ -1,8 +1,31 @@
-# Copyright (c) 2024 Nordic Semiconductor ASA
+# Custom Board Configuration for STM32F407
 # SPDX-License-Identifier: Apache-2.0
 
 board:
-  name: custom_plank
-  vendor: vendor
-  socs:
-    - name: nrf52840
+  name: custom_plank_stm32f4
+  vendor: STMicroelectronics
+  arch: arm
+  type: mcu
+  toolchain:
+    - arm-zephyr-eabi
+  supported:
+    - zephyr
+  flash: 1024        # Size of flash memory in KB (for STM32F407VG, 1MB flash)
+  ram: 192           # Size of RAM in KB (for STM32F407VG, 192KB SRAM)
+  soc: stm32f407vg
+  serial:
+    - uart
+  peripherals:
+    - gpio
+    - spi
+    - i2c
+    - usb
+    - adc
+    - dac
+  features:
+    - mcu
+    - watchdog
+    - rtc
+  connectors:
+    - usb
+    - uart
