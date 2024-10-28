@@ -340,7 +340,7 @@ GPERF:FILEPATH=C:/ProgramData/chocolatey/bin/gperf.exe
 IMGTOOL:FILEPATH=C:/Users/fahru/AppData/Local/Programs/Python/Python312/Scripts/imgtool.exe
 
 //Path to a program.
-OPENOCD:FILEPATH=OPENOCD-NOTFOUND
+OPENOCD:FILEPATH=C:/ProgramData/chocolatey/bin/openocd.exe
 
 //Path to a program.
 PAHOLE:FILEPATH=PAHOLE-NOTFOUND
@@ -529,7 +529,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=134
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=135
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

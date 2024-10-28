@@ -165,6 +165,9 @@ C:/zephyrproject/my-app/app/build/zephyr/drivers/usb/common/CMakeFiles/edit_cach
 C:/zephyrproject/my-app/app/build/zephyr/drivers/usb/common/CMakeFiles/rebuild_cache.dir
 C:/zephyrproject/my-app/app/build/zephyr/drivers/usb_c/CMakeFiles/edit_cache.dir
 C:/zephyrproject/my-app/app/build/zephyr/drivers/usb_c/CMakeFiles/rebuild_cache.dir
+C:/zephyrproject/my-app/app/build/zephyr/drivers/adc/CMakeFiles/drivers__adc.dir
+C:/zephyrproject/my-app/app/build/zephyr/drivers/adc/CMakeFiles/edit_cache.dir
+C:/zephyrproject/my-app/app/build/zephyr/drivers/adc/CMakeFiles/rebuild_cache.dir
 C:/zephyrproject/my-app/app/build/zephyr/drivers/clock_control/CMakeFiles/drivers__clock_control.dir
 C:/zephyrproject/my-app/app/build/zephyr/drivers/clock_control/CMakeFiles/edit_cache.dir
 C:/zephyrproject/my-app/app/build/zephyr/drivers/clock_control/CMakeFiles/rebuild_cache.dir

@@ -93,7 +93,7 @@
 				#gpio-cells = < 0x2 >;
 				reg = < 0x40020000 0x400 >;
 				clocks = < &rcc 0x30 0x1 >;
-				phandle = < 0x1a >;
+				phandle = < 0x1b >;
 			};
 			gpiob: gpio@40020400 {
 				compatible = "st,stm32-gpio";
@@ -115,7 +115,7 @@
 				#gpio-cells = < 0x2 >;
 				reg = < 0x40020c00 0x400 >;
 				clocks = < &rcc 0x30 0x8 >;
-				phandle = < 0x19 >;
+				phandle = < 0x1a >;
 			};
 			gpioe: gpio@40021000 {
 				compatible = "st,stm32-gpio";
@@ -152,23 +152,27 @@
 				reg = < 0x40022000 0x400 >;
 				clocks = < &rcc 0x30 0x100 >;
 			};
+			adc1_in0_pa0: adc1_in0_pa0 {
+				pinmux = < 0x10 >;
+				phandle = < 0xd >;
+			};
 			can1_rx_pb8: can1_rx_pb8 {
 				pinmux = < 0x309 >;
 				bias-pull-up;
-				phandle = < 0xf >;
+				phandle = < 0x10 >;
 			};
 			can2_rx_pb5: can2_rx_pb5 {
 				pinmux = < 0x2a9 >;
 				bias-pull-up;
-				phandle = < 0x11 >;
+				phandle = < 0x12 >;
 			};
 			can1_tx_pb9: can1_tx_pb9 {
 				pinmux = < 0x329 >;
-				phandle = < 0x10 >;
+				phandle = < 0x11 >;
 			};
 			can2_tx_pb13: can2_tx_pb13 {
 				pinmux = < 0x3a9 >;
-				phandle = < 0x12 >;
+				phandle = < 0x13 >;
 			};
 			tim2_ch1_pa0: tim2_ch1_pa0 {
 				pinmux = < 0x1 >;
@@ -253,7 +257,7 @@
 			interrupts = < 0x1f 0x0 >, < 0x20 0x0 >;
 			interrupt-names = "event", "error";
 			status = "disabled";
-			phandle = < 0x16 >;
+			phandle = < 0x17 >;
 		};
 		i2c2: i2c@40005800 {
 			compatible = "st,stm32-i2c-v1";
@@ -265,7 +269,7 @@
 			interrupts = < 0x21 0x0 >, < 0x22 0x0 >;
 			interrupt-names = "event", "error";
 			status = "disabled";
-			phandle = < 0x17 >;
+			phandle = < 0x18 >;
 		};
 		i2c3: i2c@40005c00 {
 			compatible = "st,stm32-i2c-v1";
@@ -277,7 +281,7 @@
 			interrupts = < 0x48 0x0 >, < 0x49 0x0 >;
 			interrupt-names = "event", "error";
 			status = "disabled";
-			phandle = < 0x18 >;
+			phandle = < 0x19 >;
 		};
 		spi1: spi@40013000 {
 			compatible = "st,stm32-spi";
@@ -497,13 +501,16 @@
 			reg = < 0x40012000 0x400 >;
 			clocks = < &rcc 0x44 0x100 >;
 			interrupts = < 0x12 0x0 >;
-			status = "disabled";
+			status = "okay";
 			#io-channel-cells = < 0x1 >;
 			resolutions = < 0x607804 0x517804 0x427804 0x337804 >;
 			sampling-times = < 0x3 0xf 0x1c 0x38 0x54 0x70 0x90 0x1e0 >;
 			st,adc-clock-source = < 0x1 >;
 			st,adc-sequencer = < 0x1 >;
-			phandle = < 0x15 >;
+			pinctrl-0 = < &adc1_in0_pa0 >;
+			pinctrl-names = "default";
+			st,adc-prescaler = < 0x4 >;
+			phandle = < 0x16 >;
 		};
 		dma1: dma@40026000 {
 			compatible = "st,stm32-dma-v1";
@@ -512,7 +519,7 @@
 			interrupts = < 0xb 0x0 0xc 0x0 0xd 0x0 0xe 0x0 0xf 0x0 0x10 0x0 0x11 0x0 0x2f 0x0 >;
 			clocks = < &rcc 0x30 0x200000 >;
 			status = "disabled";
-			phandle = < 0xd >;
+			phandle = < 0xe >;
 		};
 		dma2: dma@40026400 {
 			compatible = "st,stm32-dma-v1";
@@ -811,7 +818,7 @@
 				power-state-name = "suspend-to-idle";
 				min-residency-us = < 0x190 >;
 				exit-latency-us = < 0x12c >;
-				phandle = < 0x13 >;
+				phandle = < 0x14 >;
 			};
 		};
 	};
@@ -825,7 +832,7 @@
 			compatible = "st,stm32-hse-clock";
 			status = "okay";
 			clock-frequency = < 0x7a1200 >;
-			phandle = < 0x14 >;
+			phandle = < 0x15 >;
 		};
 		clk_hsi: clk-hsi {
 			#clock-cells = < 0x0 >;
@@ -924,7 +931,7 @@
 	otghs_fs_phy: otghs_fs_phy {
 		compatible = "usb-nop-xceiv";
 		#phy-cells = < 0x0 >;
-		phandle = < 0xe >;
+		phandle = < 0xf >;
 	};
 	ccm0: memory@10000000 {
 		compatible = "zephyr,memory-region", "st,stm32-ccm";

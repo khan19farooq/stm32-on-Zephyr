@@ -3043,5 +3043,12 @@ zephyr_udc0: &usbotg_fs {
     current-speed = <115200>;
     status = "okay";
 };
+
+&adc1 {
+    status = "okay";
+    pinctrl-0 = <&adc1_in0_pa0>;
+    pinctrl-names = "default";
+    st,adc-prescaler = <4>;
+};
 # 0 "<command-line>" 2
 # 1 "C:/zephyrproject/zephyr/misc/empty_file.c"

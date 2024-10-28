@@ -7,3 +7,9 @@
     status = "okay";
 };
 
+&adc1 {
+    status = "okay";
+    pinctrl-0 = <&adc1_in0_pa0>;  // ADC input pin on PA0
+    pinctrl-names = "default";
+    st,adc-prescaler = <4>;  // Set prescaler, adjust based on needs
+};
